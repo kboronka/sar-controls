@@ -43,6 +43,9 @@
     <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="sar">
+      <HintPath>..\libs\sar-tool\release\sar.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -80,12 +83,6 @@
       <DependentUpon>SocketServerControl.cs</DependentUpon>
     </Compile>
     <Compile Include="WindowsSettings.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\sar\sar.csproj">
-      <Project>{74862D71-2342-4EAE-8C29-D25F2A195677}</Project>
-      <Name>sar</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BooleanIndicator.resx">
