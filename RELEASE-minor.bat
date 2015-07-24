@@ -36,7 +36,6 @@
 	svn revert -R .
 
 	%SAR% -assy.ver \sarControls\AssemblyInfo.* %VERSION%
-
 	%SAR% -f.del sarControls\bin\%CONFIG%\*.* /q /svn
 	
 	echo building binaries
@@ -49,8 +48,10 @@
 :BuildComplete
 	svn revert
 	copy sarControls\bin\%CONFIG%\*.exe release\*.exe
+	copy sarControls\bin\%CONFIG%\*.dll release\*.dll
 	copy sarControls\bin\%CONFIG%\*.pdb release\*.pdb
 	copy LICENSE release\LICENSE
+
 	svn commit -m "new binaries v%VERSION%"
 	%ZIP% "sar-controls %VERSION%.zip" .\release\*.*
 	svn update

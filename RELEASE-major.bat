@@ -36,7 +36,7 @@
 
 	%SAR% -f.bsd \sarControls\*.cs "Kevin Boronka"
 	%SAR% -assy.ver \sarControls\AssemblyInfo.* %VERSION%
-	%SAR% -f.del sar-controls\bin\%CONFIG%\*.* /q /svn
+	%SAR% -f.del sarControls\bin\%CONFIG%\*.* /q /svn
 	
 	echo building binaries
 	%SAR% -b.net 3.5 %SOLUTION% /p:Configuration=%CONFIG% /p:Platform=\"x86\"
@@ -44,10 +44,12 @@
 	
 :BuildComplete
 	copy sarControls\bin\%CONFIG%\*.exe release\*.exe
+	copy sarControls\bin\%CONFIG%\*.dll release\*.dll
 	copy sarControls\bin\%CONFIG%\*.pdb release\*.pdb
 	copy LICENSE release\LICENSE
 	
 	%ZIP% "sar-controls %VERSION%.zip" .\release\*.*
+	
 	svn commit -m "sar version %VERSION%"
 	svn copy %REPO%/trunk %REPO%/tags/%VERSION% -m "Tagging the %VERSION% version release of the project"
 	svn update
