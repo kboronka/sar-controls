@@ -50,7 +50,7 @@
 	
 	%ZIP% "sar-controls %VERSION%.zip" .\release\*.*
 	
-	svn commit -m "sar version %VERSION%"
+	svn commit -m "sar-controls version %VERSION%"
 	svn copy %REPO%/trunk %REPO%/tags/%VERSION% -m "Tagging the %VERSION% version release of the project"
 	svn update
 	
