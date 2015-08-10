@@ -2,5 +2,10 @@
   "name": "sar-controls",
   "dependencies": {
     "sar-tool": "https://github.com/kboronka/sar-tool.git#master"
-  }
+  },
+  "ignore" : [
+    "libs",
+    "sarControls",
+    "*.*"
+  ]  
 }
