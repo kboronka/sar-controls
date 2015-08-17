@@ -45,8 +45,7 @@
 	echo building binaries
 	%SAR% -b.net 4.0 %SOLUTION% /p:Configuration=%CONFIG% /p:Platform=\"x86\"
 	if errorlevel 1 goto BuildFailed
-	pause
-	
+		
 	svn cleanup
 	svn revert -R .
 	
