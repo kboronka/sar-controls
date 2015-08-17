@@ -31,7 +31,9 @@
 	echo "VERSION.MAJOR.MINOR.BUILD".
 	set /p VERSION="> "
 
+	set SAR="release\sar.exe"
 	%SAR% -bower
+	set SAR="libs\sar-tool\release\sar.exe"
 
 	svn cleanup
 	svn update
@@ -41,7 +43,7 @@
 	%SAR% -f.del sarControls\bin\%CONFIG%\*.* /q /svn
 	
 	echo building binaries
-	%SAR% -b.net 3.5 %SOLUTION% /p:Configuration=%CONFIG% /p:Platform=\"x86\"
+	%SAR% -b.net 4.0 %SOLUTION% /p:Configuration=%CONFIG% /p:Platform=\"x86\"
 	if errorlevel 1 goto BuildFailed
 	
 :BuildComplete

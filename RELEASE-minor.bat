@@ -31,11 +31,13 @@
 	echo "VERSION.MAJOR.MINOR.BUILD".
 	set /p VERSION="> "
 
+	set SAR="release\sar.exe"
 	%SAR% -bower
+	set SAR="libs\sar-tool\release\sar.exe"
 	
 	svn cleanup
 	svn update
-	::svn revert -R .
+	svn revert -R .
 
 	%SAR% -assy.ver \sarControls\AssemblyInfo.* %VERSION%
 	%SAR% -f.del sarControls\bin\%CONFIG%\*.* /q /svn
@@ -46,10 +48,10 @@
 	pause
 	
 	svn cleanup
-	::svn revert -R .
+	svn revert -R .
 	
 :BuildComplete
-	::svn revert
+	svn revert
 	copy sarControls\bin\%CONFIG%\*.exe release\*.exe
 	copy sarControls\bin\%CONFIG%\*.dll release\*.dll
 	copy sarControls\bin\%CONFIG%\*.pdb release\*.pdb
