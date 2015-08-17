@@ -35,20 +35,21 @@
 	
 	svn cleanup
 	svn update
-	svn revert -R .
+	::svn revert -R .
 
 	%SAR% -assy.ver \sarControls\AssemblyInfo.* %VERSION%
 	%SAR% -f.del sarControls\bin\%CONFIG%\*.* /q /svn
 	
 	echo building binaries
-	%SAR% -b.net 3.5 %SOLUTION% /p:Configuration=%CONFIG% /p:Platform=\"x86\"
+	%SAR% -b.net 4.0 %SOLUTION% /p:Configuration=%CONFIG% /p:Platform=\"x86\"
 	if errorlevel 1 goto BuildFailed
+	pause
 	
 	svn cleanup
-	svn revert -R .
+	::svn revert -R .
 	
 :BuildComplete
-	svn revert
+	::svn revert
 	copy sarControls\bin\%CONFIG%\*.exe release\*.exe
 	copy sarControls\bin\%CONFIG%\*.dll release\*.dll
 	copy sarControls\bin\%CONFIG%\*.pdb release\*.pdb
