@@ -31,6 +31,8 @@
 	echo "VERSION.MAJOR.MINOR.BUILD".
 	set /p VERSION="> "
 
+	%SAR% -bower
+	
 	svn cleanup
 	svn update
 	svn revert -R .
