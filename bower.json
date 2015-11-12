@@ -3,6 +3,8 @@
   "version": "1.1.0",
   "description": "ui controls for sar-tools library",
   "license": "BSD",
+  "homepage": "http://kboronka.github.io/sar-tool/",
+  "author": "kevin boronka",    
   "main": [
     "release/sar.exe",
     "release/sar.pdb",
