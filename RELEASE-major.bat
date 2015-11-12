@@ -31,9 +31,7 @@
 	echo "VERSION.MAJOR.MINOR.BUILD".
 	set /p VERSION="> "
 
-	set SAR="release\sar.exe"
-	%SAR% -bower
-	set SAR="libs\sar-tool\release\sar.exe"
+	call UpdateExternals.bat
 
 	svn cleanup
 	svn update
