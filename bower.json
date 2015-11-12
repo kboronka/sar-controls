@@ -5,7 +5,7 @@
   "license": "BSD",
   "main": [
     "release/sar.exe",
-    "release/sar.pdb"
+    "release/sar.pdb",
     "release/sarControls.dll",
     "release/sarControls.pdb"
   ],  
