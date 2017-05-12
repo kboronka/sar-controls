@@ -46,7 +46,7 @@ namespace sar.Controls
 		
 		public override string Text
 		{
-			get { return StringHelper.TrimWhiteSpace(base.Text); }
+			get { return base.Text.TrimWhiteSpace(); }
 			set
 			{
 				try

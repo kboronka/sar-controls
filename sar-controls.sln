@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-# SharpDevelop 5.1
+# SharpDevelop 5.2
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sarControls", "sarControls\sarControls.csproj", "{304FB8D1-948C-42A1-AB22-8802FB42E8B0}"
 EndProject
 Global
