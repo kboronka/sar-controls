@@ -27,8 +27,8 @@ namespace Testing
 			
 			this.timer1.Interval = 100;
 			
-			client1 = new SocketClient("127.1.1.1", 911, Program.ErrorLog, Program.DebugLog);
-			client2 = new SocketClient("127.1.1.1", 911, Program.ErrorLog, Program.DebugLog);
+			client1 = new SocketClient("127.1.1.1", 911);
+			client2 = new SocketClient("127.1.1.1", 911);
 
 			client1.SetValue("Testing", AssemblyInfo.Version, true);
 			

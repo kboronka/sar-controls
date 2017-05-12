@@ -20,6 +20,7 @@ namespace Testing
 		private sar.Controls.BooleanIndicator booleanIndicator1;
 		private sar.Controls.ReadOnlyTextBox readOnlyTextBox1;
 		private System.Windows.Forms.Timer timer1;
+		private sar.Controls.ReadOnlyTextBox readOnlyTextBox2;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -49,6 +50,7 @@ namespace Testing
 			this.booleanIndicator1 = new sar.Controls.BooleanIndicator();
 			this.readOnlyTextBox1 = new sar.Controls.ReadOnlyTextBox();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
+			this.readOnlyTextBox2 = new sar.Controls.ReadOnlyTextBox();
 			this.SuspendLayout();
 			// 
 			// folderSelect1
@@ -107,11 +109,23 @@ namespace Testing
 			// 
 			this.timer1.Tick += new System.EventHandler(this.Timer1Tick);
 			// 
+			// readOnlyTextBox2
+			// 
+			this.readOnlyTextBox2.BackColor = System.Drawing.Color.White;
+			this.readOnlyTextBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
+			this.readOnlyTextBox2.Location = new System.Drawing.Point(533, 443);
+			this.readOnlyTextBox2.Multiline = true;
+			this.readOnlyTextBox2.Name = "readOnlyTextBox2";
+			this.readOnlyTextBox2.ReadOnly = true;
+			this.readOnlyTextBox2.Size = new System.Drawing.Size(241, 20);
+			this.readOnlyTextBox2.TabIndex = 5;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(980, 481);
+			this.Controls.Add(this.readOnlyTextBox2);
 			this.Controls.Add(this.readOnlyTextBox1);
 			this.Controls.Add(this.booleanIndicator1);
 			this.Controls.Add(this.socketClientControl1);
