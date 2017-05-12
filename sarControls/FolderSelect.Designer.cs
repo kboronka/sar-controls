@@ -13,7 +13,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-namespace sarControls
+namespace sar.Controls
 {
 	partial class FolderSelect
 	{

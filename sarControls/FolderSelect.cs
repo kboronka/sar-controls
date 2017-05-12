@@ -19,7 +19,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
 
-namespace sarControls
+namespace sar.Controls
 {
 	public partial class FolderSelect : UserControl
 	{

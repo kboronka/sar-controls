@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 # SharpDevelop 5.2
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sarControls", "sarControls\sarControls.csproj", "{304FB8D1-948C-42A1-AB22-8802FB42E8B0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{8CE65E20-45A7-48A8-9A33-4353D4389D19}"
 EndProject
 Global
@@ -12,10 +10,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{304FB8D1-948C-42A1-AB22-8802FB42E8B0}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{304FB8D1-948C-42A1-AB22-8802FB42E8B0}.Debug|x86.Build.0 = Debug|Any CPU
-		{304FB8D1-948C-42A1-AB22-8802FB42E8B0}.Release|x86.ActiveCfg = Release|Any CPU
-		{304FB8D1-948C-42A1-AB22-8802FB42E8B0}.Release|x86.Build.0 = Release|Any CPU
 		{8CE65E20-45A7-48A8-9A33-4353D4389D19}.Debug|x86.ActiveCfg = Debug|x86
 		{8CE65E20-45A7-48A8-9A33-4353D4389D19}.Debug|x86.Build.0 = Debug|x86
 		{8CE65E20-45A7-48A8-9A33-4353D4389D19}.Release|x86.ActiveCfg = Release|x86
